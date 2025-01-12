@@ -18,7 +18,7 @@ Ensure you have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/ocr-scanner.git
+   git clone https://github.com/ShehryarAijaz/ocr-scanner.git
    cd ocr-scanner
    ```
 
