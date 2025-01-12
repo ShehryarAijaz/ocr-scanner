@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR Scanner</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>OCR Scanner</h1>
+  
+  {% if error %}
+    <div class="error">{{ error }}</div>
+  {% endif %}
+  
+  <form method="POST" enctype="multipart/form-data">
+    <label for="image">Upload an Image:</label>
+    <input type="file" name="image" id="image" accept="image/*" required>
+    <button type="submit">Extract Text</button>
+  </form>
+
+  {% if extracted_text %}
+    <h2>Extracted Text:</h2>
+    <pre>{{ extracted_text }}</pre>
+  {% endif %}
+</body>
+</html>
